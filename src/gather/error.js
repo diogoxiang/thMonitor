@@ -13,22 +13,31 @@ import filter from '../utils/filter';
 let config = {};
 
 function errorhandler(e) {
+    // debugger
     if (!config.client || !config.imgUrl) {
         return;
     }
     let errorObj = {};
 
     if (e.target != window) {
+        // 这里一般都是资源引用错误 如404
+        // debugger
         let copye = e;
         e = e.target ? e.target : e.srcElement;
         let out = e && e.outerHTML;
         out && out.length > 200 && (out = out.slice(0, 200));
+        // debugger
         errorObj = {
             target: 'resourceError',
             type: copye.type || 'unknown',
-            file: encodeURIComponent(e.currentSrc || e.src),
-            page: encodeURIComponent(location.href),
-            outerHTML: encodeURIComponent(out),
+            // 错误类型
+            errorInfo: 'resourceError = ' + copye.type,
+            errorDoc: encodeURIComponent(e.currentSrc || e.src),//加载错误的文件 URL
+            // ---
+            page: encodeURIComponent(location.href), // 当前页面
+            loadErrDoc: encodeURIComponent(location.href), //当前页面 URL
+            //--
+            loadErrMsg: encodeURIComponent(out),
             tagName: e && e.tagName,
             id: e.id || 'null',
             className: e.className || 'null',
@@ -37,25 +46,36 @@ function errorhandler(e) {
             errorKey: encodeURIComponent(compressString(out, findPath(e))),
         };
     } else {
+        // 这里是script 错误
         const ErrTypeReg = /Uncaught\s(\S*):/i;
         const type = e.message.match(ErrTypeReg);
         errorObj = {
             target: 'scriptError',
             msg: e.message,
-            file: encodeURIComponent(e.filename),
-            line: e.lineno,
-            col: e.colno,
+            // 错误的信息
+            errorDetail: e.message,
+            errorInfo: 'scriptError==' + type,
+            // 错误的文件名
+            errorDoc: encodeURIComponent(e.filename),
+            errorLin: e.lineno,
+            errorRow: e.colno,
             stack: e.stack || (e.error ? e.error.stack : void 0),
-            page: encodeURIComponent(location.href),
+            page: encodeURIComponent(location.href), // 当前页面 
+            loadErrDoc: encodeURIComponent(location.href),
             type: type && type[1],
             errorKey: compressString(String(e.message), String(e.colno) + String(e.lineno)),
         }
+
+        // script Error 过滤错误级别 过滤错误次数
         if (filter(errorObj) || setGrade(errorObj.msg, config.level) || setItem(errorObj.stack, config.repeat)) {
             return;
         }
+
     }
+
     const exportData = extend({
         client: config['client'],
+        object: config['client'],// 相应的项目
         version: config['version'],
         key: `${+new Date()}@${randomString(8)}`,
         pageId: config['pageId']
@@ -100,6 +120,7 @@ function error(co) {
     window.addEventListener && window.addEventListener("error", errorhandler, true);
 }
 
+// find path
 function findPath(e) {
     let arr;
     for (arr = []; e && e.nodeType == Node.ELEMENT_NODE; e = e.parentNode) {
@@ -116,6 +137,7 @@ function findPath(e) {
     return arr.length ? "/" + arr.join("/") : null
 }
 
+// find selector
 function findSelector(e) {
     let arr;
     for (arr = []; e.parentNode;) {

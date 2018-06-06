@@ -3,7 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    thmonitor: __dirname + '/src/index.js',
+    thmonitor: __dirname + '/src/index.js'
   },
   output: {
     path: __dirname + '/example/build',

@@ -7,49 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        (function (w) {
-            w._error_storage_ = [];
-            w.ERROR_CONFIG = {
-                client: 'test',
-                imgUrl: 'http://retcode.tuipink.com/report?', // http://retcode.tuipink.com/report
-                version: '0.0.1',
-                pageId: 'smashg_2',
-            };
-            function errorhandler() {
-                // 用于记录当前的错误            
-                w._error_storage_ && w._error_storage_.push([].slice.call(arguments));
-            }
-            w.addEventListener && w.addEventListener("error", errorhandler, true);
-            var times = 3,
-                appendScript = function appendScript() {
-                    var sc = document.createElement("script");
-                    sc.async = !0,
-                        sc.src = './build/skyeye.js',  // 取决于你存放的位置
-                        sc.crossOrigin = "anonymous",
-                        sc.onerror = function () {
-                            times-- ,
-                                times > 0 && setTimeout(appendScript, 1500)
-                        },
-                        document.head && document.head.appendChild(sc);
-                };
-            setTimeout(appendScript, 1500);
-        })(window);
+        // (function (w) {
+        //     w._error_storage_ = [];
+        //     w.ERROR_CONFIG = {
+        //         client: 'test',
+        //         imgUrl: 'https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?', // http://retcode.tuipink.com/report
+        //         version: '0.0.1',
+        //         pageId: 'smashg_2',
+        //     };
+        //     function errorhandler() {
+        //         // 用于记录当前的错误            
+        //         w._error_storage_ && w._error_storage_.push([].slice.call(arguments));
+        //     }
+        //     w.addEventListener && w.addEventListener("error", errorhandler, true);
+        //     var times = 3,
+        //         appendScript = function appendScript() {
+        //             var sc = document.createElement("script");
+        //             sc.async = !0,
+        //                 sc.src = './build/thmonitor.js',  // 取决于你存放的位置
+        //                 sc.crossOrigin = "anonymous",
+        //                 sc.onerror = function () {
+        //                     times-- ,
+        //                         times > 0 && setTimeout(appendScript, 1500)
+        //                 },
+        //                 document.head && document.head.appendChild(sc);
+        //         };
+        //     setTimeout(appendScript, 0);
+        // })(window);
     </script>
-    <script src='s.js'></script>
+
 </head>
 
 <body>
-    <h1>这是一个测试页面(new)</h1>
-    <!-- <img src="sd.jpg" alt=""> -->
     <script>
+        // window._error_storage_ = [];
+        // !(function (c, b, d, a) {
+        //     c[a] || (c[a] = {}); c.ERROR_CONFIG = { client: "gv4fwjroys@da32d0d534010e7", imgUrl: "https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?", disableHook: true };
+        //     with (b) with (body) with (insertBefore(createElement("script"), firstChild)) setAttribute("crossorigin", "", src = d)
+        // })(window, document, "./build/thmonitor.js", "__bl");
+
+
+        !(function (metaWindow, selector, d, wId) {
+            if (!metaWindow[wId]) {
+                metaWindow[wId] = {};
+            }
+            metaWindow['_error_storage_'] = [];
+            metaWindow.ERROR_CONFIG = {
+                client: "gv4fwjroys@da32d0d534010e7",
+                imgUrl: "https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?",
+                disableHook: true
+            };
+            function errorhandler() {
+                console.log(_error_storage_);
+                metaWindow._error_storage_ && metaWindow._error_storage_.push([].slice.call(arguments));
+            }
+            metaWindow.addEventListener && metaWindow.addEventListener("error", errorhandler, true);
+            with (selector) {
+                with (body) {
+                    with (insertBefore(createElement("script"), firstChild)) {
+                        setAttribute("crossorigin", "", src = d);
+                    }
+                }
+            }
+        })(window, document, "./build/thmonitor.js", "__th");
     </script>
+
+
+    <h1>这是一个测试监控的页面</h1>
+    <img src="sd.jpg" alt="">
+    <img src="sed.jpg" alt="">
+    <img src="sde.jpg" alt="">
     <script>
-        console.log(aaa);
+
+        // setTimeout(function () {
+        //     console.log("object");
+        //     console.log(object111);
+        // }, 2000)
     </script>
     <!-- <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.0.0.0"></script>
 <script>
 	var vConsole = new VConsole();
 </script> -->
+    <!-- <script src='s.js'></script> -->
 </body>
 
 </html>

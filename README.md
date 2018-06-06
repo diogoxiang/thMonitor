@@ -28,3 +28,26 @@
         ignore: Array<RegExp | Function>; // 过滤条件
     }
     ```
+
+
+### Error types
+Besides the generic Error constructor, there are seven other core error constructors in JavaScript. For client-side exceptions, see Exception handling statements.
+
+- EvalError
+Creates an instance representing an error that occurs regarding the global function eval().
+- InternalError 
+Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".
+- RangeError
+Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+- ReferenceError 引用错误,一般由参数未定义引起
+Creates an instance representing an error that occurs when de-referencing an invalid reference.
+- SyntaxError 语法错误
+Creates an instance representing a syntax error that occurs while parsing code in eval().
+- TypeError
+Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.
+- URIError
+Creates an instance representing an error that occurs when encodeURI() or decodeURI() are passed invalid parameters.
+
+
+
+
