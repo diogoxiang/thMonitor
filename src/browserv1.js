@@ -1,10 +1,13 @@
+/**
+ * 可以添加到 head 内
+ */
 (function (w) {
     w._error_storage_ = [];
     w.ERROR_CONFIG = {
         client: 'tuia',
         pageId: 'smashg_2',
         version: '0.0.1',
-        imgUrl: 'http://retcode.tuipink.com/report',
+        imgUrl: 'https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?',
     };
     function errorhandler() {
         // 用于记录当前的错误            
@@ -15,7 +18,7 @@
         appendScript = function appendScript() {
             var sc = document.createElement("script");
             sc.async = !0,
-                sc.src = '//yun.zuixhd.com/tuia/skyeye/skyeye.js',  // 取决于你存放的位置
+                sc.src = './build/thmonitor.js',  // 取决于你存放的位置
                 sc.crossOrigin = "anonymous",
                 sc.onerror = function () {
                     times-- ,
@@ -23,5 +26,5 @@
                 },
                 document.head && document.head.appendChild(sc);
         };
-    setTimeout(appendScript, 1500);
+    setTimeout(appendScript, 0);
 })(window);

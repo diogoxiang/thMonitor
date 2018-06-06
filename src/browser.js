@@ -1,5 +1,5 @@
 /**
- * 这个是用于添加到html上的代码
+ * 这个是用于添加到body 标签内的代码
  */
 !(function (metaWindow, selector, d, wId) {
     if (!metaWindow[wId]) {

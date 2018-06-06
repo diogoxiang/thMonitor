@@ -1,3 +1,6 @@
+/**
+ * http  report
+ */
 function errorPost(url, data) {
     var http = new XMLHttpRequest;
     http.open("POST", url, !0),
@@ -5,6 +8,10 @@ function errorPost(url, data) {
         http.send(data);
 }
 
+/**
+ *  
+ * @param {*} obj 
+ */
 function stringfy(obj) {
     if (!obj || typeof obj !== 'object') {
         return;
@@ -13,6 +20,9 @@ function stringfy(obj) {
     return arr.join('&');
 }
 
+/**
+ * 扩展
+ */
 function extend(src) {
     let arg = arguments;
     if (arg.length >= 2) {

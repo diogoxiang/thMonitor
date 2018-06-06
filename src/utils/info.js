@@ -1,3 +1,5 @@
+import useragent from '../gather/useragent'
+
 // 获取基本信息
 const info = (function () {
   let system = '', // 系统版本
@@ -61,7 +63,7 @@ const info = (function () {
   //操作时间
   const time = new Date().toISOString();
   //分辨率
-  let $resolution = window.screen.width * window.devicePixelRatio + "*" + window.screen.height * window.devicePixelRatio;
+  let $resolution = useragent().sr + '-' + useragent().dp;
   return {
     sysVersion: system,
     tetType: mobile,

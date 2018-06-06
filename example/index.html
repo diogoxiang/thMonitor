@@ -34,6 +34,7 @@
         //         };
         //     setTimeout(appendScript, 0);
         // })(window);
+
     </script>
 
 </head>
@@ -58,7 +59,6 @@
                 disableHook: true
             };
             function errorhandler() {
-                console.log(_error_storage_);
                 metaWindow._error_storage_ && metaWindow._error_storage_.push([].slice.call(arguments));
             }
             metaWindow.addEventListener && metaWindow.addEventListener("error", errorhandler, true);
@@ -74,21 +74,11 @@
 
 
     <h1>这是一个测试监控的页面</h1>
-    <img src="sd.jpg" alt="">
-    <img src="sed.jpg" alt="">
-    <img src="sde.jpg" alt="">
-    <script>
 
-        // setTimeout(function () {
-        //     console.log("object");
-        //     console.log(object111);
-        // }, 2000)
-    </script>
-    <!-- <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.0.0.0"></script>
-<script>
-	var vConsole = new VConsole();
-</script> -->
-    <!-- <script src='s.js'></script> -->
+
+
+
+    <script src='s.js'></script>
 </body>
 
 </html>
