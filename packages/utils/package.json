@@ -1,0 +1,9 @@
+{
+  "name": "@thmonitor/utils",
+  "version": "1.0.0",
+  "description": "Utilities for all thmonitor JavaScript SDKs",
+  "main": "index.js",
+  "author": "diogoxiang@qq.com",
+  "license": "MIT",
+  "private": true
+}
