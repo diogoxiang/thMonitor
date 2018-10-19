@@ -5,15 +5,22 @@
   "main": "index.js",
   "author": "diogoxiang@qq.com",
   "license": "MIT",
- 
+
   "engines": {
     "node": ">=6"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:watch": "tsc -p tsconfig.build.json -w --preserveWatchOutput",
+    "clean": "rimraf dist coverage *.js *.js.map *.d.ts",
+    "test": "jest",
+    "test:watch": "jest --watch --notify"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    
+
   },
   "devDependencies": {
     "chai": "^4.1.2",
