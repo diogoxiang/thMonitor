@@ -10,16 +10,8 @@ import setGrade from '../utils/level';
 import info from '../utils/info';
 import filter from '../utils/filter';
 
-import thinfo from '../utils/thinfo'
-
-console.log(thinfo);
-
 let config = {};
 
-/**
- * error 
- * @param {*} e 
- */
 function errorhandler(e) {
     // debugger
     if (!config.client || !config.imgUrl) {
@@ -87,16 +79,11 @@ function errorhandler(e) {
         version: config['version'],
         key: `${+new Date()}@${randomString(8)}`,
         pageId: config['pageId']
-    }, errorObj, info, thinfo);
+    }, errorObj, info);
     // errorPost(`${config.imgUrl}`, JSON.stringify(exportData));
     (new Image()).src = `${config.imgUrl}${stringfy(exportData)}`;
 }
 
-/**
- * compress string 
- * @param {*} str 
- * @param {*} key 
- */
 function compressString(str, key) {
     if (!str || !key) {
         return 'null';
@@ -113,10 +100,6 @@ function compressString(str, key) {
     return num;
 }
 
-/**
- * 随机 string 
- * @param {*} len 
- */
 function randomString(len) {
     len = len || 32;
     let chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
@@ -128,11 +111,6 @@ function randomString(len) {
     return pwd;
 }
 
-/**
- * 错误监听
- * 
- * @param {*} co 
- */
 function error(co) {
     config = co;
     const storage = window._error_storage_;
@@ -141,8 +119,6 @@ function error(co) {
     }
     window.addEventListener && window.addEventListener("error", errorhandler, true);
 }
-
-window.onerror = error;
 
 // find path
 function findPath(e) {

@@ -2,7 +2,6 @@ console.log("object");
 
 console.log("object");
 
-console.log(object);
 
 // console.log(111dddd);
 

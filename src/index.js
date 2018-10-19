@@ -6,7 +6,7 @@ let config = {
     client: '',
     imgUrl: '',
     level: '0',
-    repeat: '5', // 重复上报次数(对于同一个 js错误超过多少次不上报),
+    repeat: '5', // 重复上报次数(对于同一个错误超过多少次不上报),
     version: '0.0.1',
 }
 
