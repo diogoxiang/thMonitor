@@ -1,4 +1,21 @@
 'use strict';
+ /*
+ * File: f:\Diogo\github.com\thMonitor\example\bl_resolve\src\reporter.js
+ * Project: f:\Diogo\github.com\thMonitor\example\bl_resolve
+ * Created Date: Monday October 22nd 2018
+ * Author: Diogo
+ * -----
+ * Last Modified: Monday October 22nd 2018 3:18:03 pm
+ * Modified By: the developer formerly known as Diogo at <Diogoxiang@qq.com>
+ * -----
+ * Copyright (c) 2018 taiheiot.com
+ * -----
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
+
+//  id :10 
 // function (require, context, n) {} 引用
 
 

@@ -1,5 +1,14 @@
 'use strict';
+/*
+ * Filename: f:\Diogo\github.com\thMonitor\example\bl_resolve\src\base.js
+ * Path: f:\Diogo\github.com\thMonitor\example\bl_resolve
+ * Created Date: Monday, October 22nd 2018, 2:55:25 pm
+ * Author: Diogo
+ * 
+ * Copyright (c) 2018 taiheiot.com
+ */
 
+//  id:1
 import * as self from "./util"
 
 // console.log(self);
@@ -36,6 +45,9 @@ fn.prototype = {
     $ab: function () {
         return {};
     },
+    /**
+     * 增加session 及时间
+     */
     $a6: function () {
         this.session = self.uu();
         /** @type {number} */

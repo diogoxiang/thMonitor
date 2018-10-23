@@ -2,14 +2,15 @@
 ! function () {
     // console.log("object");
     function init(t, n, r) {
-        console.log(t);
-        console.log(n);
-        console.log(r)
+        // console.log(t);
+        // console.log(n);
+        // console.log(r)
 
         function s(o, u) {
-            
+
             if (!n[o]) {
-           
+
+                // 当为空的时候跳过
                 if (!t[o]) {
                     var a = "function" == typeof require && require;
                     if (!u && a) {
@@ -27,7 +28,9 @@
                 };
                 t[o][0].call(u.exports, function (e) {
                     return s(t[o][1][e] || e);
-                }, u, u.exports, e, t, n, r);
+                }, u, u.exports, init, t, n, r);
+
+
             }
             return n[o].exports;
         }
@@ -46,52 +49,49 @@
 }()({
     1: [
         function ($, meta, n) {
-            console.log($);
+            
+            console.log(meta);
+           
+            var fn = function (s) {
+                console.log(s);
+            }
+            fn.dftCon = {
+                sample: 1,
+                tag: ""
+            }
+
+            meta.exports = fn
+
         }
     ],
     2: [
-        function ($, meta, n) {
-            console.log($);
+        function (require, module, n) {
+            var self = function () {
+                console.log("2");
+            }
+
+            module.exports = self;
         }
     ],
     3: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    4: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    6: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    7: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    8: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    9: [
-        function (require, context, n) {
-            // console.log($);
-        }
-    ],
-    10: [
-        function ($, meta, n) {
-            console.log($);
-        }
-    ],
-    11: [
-        function ($, meta, n) {
-            console.log($);
+        function (require, module, n) {
+
+            var $ = require("./util")
+            var ba = require("./base")
+
+            // console.log($.dftCon);
+            ba(2)
+            
+            console.log(this);
+
+            var self = function () {
+                console.log("3");
+            }
+
+            module.exports = self;
+        }, {
+            "./util": 1,
+            "./base": 2,
         }
     ]
-}, {}, [9]);
+}, {}, [3]);

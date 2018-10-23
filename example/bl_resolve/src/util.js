@@ -1,4 +1,14 @@
 'use strict';
+/*
+ * Filename: f:\Diogo\github.com\thMonitor\example\bl_resolve\src\util.js
+ * Path: f:\Diogo\github.com\thMonitor\example\bl_resolve
+ * Created Date: Monday, October 22nd 2018, 10:34:05 am
+ * Author: Diogo
+ * 
+ * Copyright (c) 2018 taiheiot.com
+ */
+
+//  id :  11
 // 扩展 Date
 Date.now = Date.now || function () {
     return (new Date).getTime();
