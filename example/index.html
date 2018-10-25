@@ -57,14 +57,15 @@
                 imgUrl: "https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?",
                 disableHook: true
             };
+
             function errorhandler() {
                 console.log(_error_storage_);
                 metaWindow._error_storage_ && metaWindow._error_storage_.push([].slice.call(arguments));
             }
             metaWindow.addEventListener && metaWindow.addEventListener("error", errorhandler, true);
-            with (selector) {
-                with (body) {
-                    with (insertBefore(createElement("script"), firstChild)) {
+            with(selector) {
+                with(body) {
+                    with(insertBefore(createElement("script"), firstChild)) {
                         setAttribute("crossorigin", "", src = d);
                     }
                 }
@@ -75,19 +76,24 @@
 
     <h1>这是一个测试监控的页面</h1>
     <img src="sd.jpg" alt="">
-    <img src="sed.jpg" alt="">
-    <img src="sde.jpg" alt="">
-    <script>
 
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script>
         // setTimeout(function () {
         //     console.log("object");
         //     console.log(object111);
         // }, 2000)
+
+        $.ajax({
+            type: "POST",
+            url: "some.php",
+            data: "name=John&location=Boston",
+            success: function (msg) {
+                console.log("Data Saved: " + msg);
+            }
+        })
     </script>
-    <!-- <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=3.0.0.0"></script>
-<script>
-	var vConsole = new VConsole();
-</script> -->
+
     <!-- <script src='s.js'></script> -->
 </body>
 

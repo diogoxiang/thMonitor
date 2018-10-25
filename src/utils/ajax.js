@@ -10,6 +10,7 @@
         xhr.open = function() {
             var param = 1 === arguments.length ? [arguments[0]] : Array.apply(null, arguments);
             xhr_open.apply(xhr, param);
+           
         }
         xhr.send = function() {
             start_time = Date.now();

@@ -6,7 +6,7 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval("\n\nvar _error = __webpack_require__(/*! ./gather/error */ \"./src/gather/error.js\");\n\nvar _error2 = _interopRequireDefault(_error);\n\nvar _index = __webpack_require__(/*! ./utils/index */ \"./src/utils/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar config = {\n    client: '',\n    imgUrl: '',\n    level: '0',\n    repeat: '5', // 重复上报次数(对于同一个错误超过多少次不上报),\n    version: '0.0.1'\n};\n\nconfig = (0, _index.extend)(config, window['ERROR_CONFIG']);\n(0, _error2.default)(config);\n\n//# sourceURL=webpack:///./src/index.js?")},"./src/utils/cache.js":
+/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval("\n\nvar _error = __webpack_require__(/*! ./gather/error */ \"./src/gather/error.js\");\n\nvar _error2 = _interopRequireDefault(_error);\n\nvar _index = __webpack_require__(/*! ./utils/index */ \"./src/utils/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// 监控ajax\n// import hookAjax from \"./utils/ajax\"\n\nvar config = {\n    client: '',\n    imgUrl: '',\n    level: '0',\n    repeat: '5', // 重复上报次数(对于同一个错误超过多少次不上报),\n    version: '0.0.1'\n};\n\nconfig = (0, _index.extend)(config, window['ERROR_CONFIG']);\n(0, _error2.default)(config);\n\n//# sourceURL=webpack:///./src/index.js?")},"./src/utils/cache.js":
 /*!****************************!*\
   !*** ./src/utils/cache.js ***!
   \****************************/
