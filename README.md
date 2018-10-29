@@ -28,7 +28,8 @@
         ignore: Array<RegExp | Function>; // 过滤条件
     }
     ```
-
+## ajax
+ 
 
 ### Error types
 Besides the generic Error constructor, there are seven other core error constructors in JavaScript. For client-side exceptions, see Exception handling statements.

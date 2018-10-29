@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="lib/zepto.min.js"></script>
+    <!-- <script src="lib/AjaxInterceptor.js"> -->
+    <!-- <script src="lib/ajaxhook.min.js"></script> -->
+    </script>
     <script>
         // (function (w) {
         //     w._error_storage_ = [];
@@ -77,21 +81,39 @@
     <h1>这是一个测试监控的页面</h1>
     <img src="sd.jpg" alt="">
 
-    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
         // setTimeout(function () {
         //     console.log("object");
         //     console.log(object111);
         // }, 2000)
 
-        $.ajax({
-            type: "POST",
-            url: "some.php",
-            data: "name=John&location=Boston",
-            success: function (msg) {
-                console.log("Data Saved: " + msg);
-            }
-        })
+        // AjaxInterceptor.registerObserver({
+        //     condition: /(GET|POST) https?\:\/\/www.*/,
+        //     callback: function (event, xhr) {
+        //         switch (xhr.readyState) {
+        //             case XMLHttpRequest.DONE:
+        //                 // your code here
+        //                 console.log("object");
+        //                 break;
+        //         }
+        //     }
+        // });
+
+        // 监听 ajax 大概有300ms的空白间隔
+        setTimeout(function () {
+            console.log(window.hookAjax);
+            
+
+            $.ajax({
+                type: "POST",
+                url: "https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?",
+                data: "name=John&location=Boston",
+                success: function (msg) {
+                    console.log("Data Saved: " + msg);
+                }
+            })
+        }, 300)
     </script>
 
     <!-- <script src='s.js'></script> -->
