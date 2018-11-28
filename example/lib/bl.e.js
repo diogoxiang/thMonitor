@@ -786,7 +786,7 @@
                     _tmpl.errorHandler(err);
                 }
             }), config;
-        };
+        }; 
     }, {
         "../common/perf": 7,
         "../util": 11

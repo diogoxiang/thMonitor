@@ -50,4 +50,4 @@ Creates an instance representing an error that occurs when encodeURI() or decode
 
 
 
-
+POST http://api.cashtoutiao.com/frontend/collection/check?userId=124570239&loginId=730f70c3f4694abdae27ab47b720c2f3 HTTP/1.1 User-Agent: Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V10.0.2.0.OCACNFH) hsp Content-Type: application/encrypted-json Accept: application/encrypted-json Host: api.cashtoutiao.com Connection: Keep-Alive Accept-Encoding: gzip Content-Length: 128  ���ڟ�a���"�"^�H�����ul�}� ����j7��|�[$AG3�&�'+}�=MO/�֍��tn���F��W�m���f���P	8����UӁA/^�I2�3�5"����ɭ��� HTTP/1.1 200 OK Server: Apache-Coyote/1.1 Content-Type: application/encrypted-json;charset=UTF-8 Transfer-Encoding: chunked Date: Fri, 26 Oct 2018 08:10:54 GMT  20 ����a�'�����RE5�6�qH7�pa��Sd 0

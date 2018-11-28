@@ -48,10 +48,10 @@
     return init
 }()({
     1: [
-        function ($, meta, n) {
-            
+        function ($, meta, n) { 
+            console.log($);
             console.log(meta);
-           
+            console.log(object);
             var fn = function (s) {
                 console.log(s);
             }

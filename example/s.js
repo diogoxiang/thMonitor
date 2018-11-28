@@ -7,7 +7,7 @@ console.log("object");
 
 // this = "2222"
 
-
+console.log(jj);
 
 function isT(val, type) {
     /** @type {string} */
