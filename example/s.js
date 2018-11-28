@@ -76,3 +76,5 @@ console.log(Object.prototype.toString.call([1,2,3]));
   console.log(en('%28ddsdfk%29sdfsdf', 1));
 
  
+
+   console.log(object);
