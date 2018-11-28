@@ -81,58 +81,28 @@
     <h1>这是一个测试监控的页面</h1>
     <img src="sd.jpg" alt="">
 
-<<<<<<< HEAD
-    <!-- <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
-=======
-
->>>>>>> 91fc851ed5cb547dc403e6b694384ce6d328c92c
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        // setTimeout(function () {
-        //     console.log("object");
-        //     console.log(object111);
-        // }, 2000)
-
-<<<<<<< HEAD
-        $.ajax({
-            type: "POST",
-            url: "some.php",
-            data: "name=John&location=Boston",
-            success: function (msg) {
-                console.log("Data Saved: " + msg);
-            }
-        })
-    </script> -->
-=======
-        // AjaxInterceptor.registerObserver({
-        //     condition: /(GET|POST) https?\:\/\/www.*/,
-        //     callback: function (event, xhr) {
-        //         switch (xhr.readyState) {
-        //             case XMLHttpRequest.DONE:
-        //                 // your code here
-        //                 console.log("object");
-        //                 break;
-        //         }
-        //     }
-        // });
-
-        // 监听 ajax 大概有300ms的空白间隔
         setTimeout(function () {
-            console.log(window.hookAjax);
-            
+            console.log("object");
+            // console.log(object111);
+            Getjson()
+        }, 2000)
 
+
+        function Getjson() {
             $.ajax({
                 type: "POST",
-                url: "https://yz2-s-stg.taiheiot.com/cloud2.member.api/member/userInfo/errorMessage.do?",
+                url: "some.php",
                 data: "name=John&location=Boston",
                 success: function (msg) {
                     console.log("Data Saved: " + msg);
                 }
             })
-        }, 300)
+        }
     </script>
->>>>>>> 91fc851ed5cb547dc403e6b694384ce6d328c92c
 
-    <script src='s.js'></script>
+    <!-- <script src='s.js'></script> -->
 </body>
 
 </html>
