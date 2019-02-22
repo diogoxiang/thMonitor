@@ -27,7 +27,7 @@ ajaxError
             page:"http://localhost:9000/example/",  // 错误的页面
             loadErrDoc:"http://localhost:9000/example/", // 错误页的文档 html js
             loadErrMsg: `<img src="sd.jpg" alt="">`,   // 错误的内容 
-            
+
             msg: `Uncaught ReferenceError: jj is not defined`, //错误console
             errorDetail: `Uncaught ReferenceError: jj is not defined`, // 错误 detail
             errorLin: `10`, // 行 
@@ -40,7 +40,7 @@ ajaxError
             ajaxReturnMsg:"", // 返回的Msg信息
 
 
-          
+
 
             userToken:"", // 可能为空
             performanceMsg:'', // 用户打开页面的 渲染时间集
