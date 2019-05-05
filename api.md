@@ -4,14 +4,17 @@
 ## 参数分类:
 resourceError
 scriptError
-ajaxError
+ajaxErr
+
+
+
 
 
 ## 上报的参数定义
   
   因有些参数 可能取不到, 或是 相对出现的 情况, 需要注意
 
-```js 
+```js
         let reportMsg={
             client: `gv4fwjroys@da32d0d534010e7`, // 用来定义是 监控的所属项目及活动或是单品  规则是 如: '吉林@单品'
             object:`gv4fwjroys@da32d0d534010e7`, // 活动配置的Key   ,当没有活动的时候 就是跟 client 一致
