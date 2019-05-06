@@ -6,7 +6,8 @@
   "scripts": {
     "demo": "node server.js",
     "start": "webpack --config webpack.config.js  --mode development  --watch",
-    "build": "webpack --mode production && uglifyjs src/browser.js -m -o example/build/browser.js"
+    "buildWEB": "webpack --mode production && uglifyjs src/browser.js -m -o example/build/browser.js",
+    "build": "webpack --mode production"
   },
   "author": "Diogoxiang<233894432@qq.com>",
   "license": "ISC",
