@@ -5,6 +5,14 @@
     {
         "version": "0.1.0",
         "configurations": [
+            
+            
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Launch Program",
+                "program": "${file}"
+            },
             {
                 "type": "chrome",
                 "request": "launch",
@@ -24,6 +32,7 @@
                 "request": "launch",
                 "file": "${workspaceFolder}/example/demo.html"
             },
+
 
         ]
     }
