@@ -1,0 +1,29 @@
+.nav {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.nav li {
+  list-style: none;
+  align-self: stretch;
+}
+
+.Demo-item {
+  list-style: circle;
+  padding: 10px;
+  background: lightgoldenrodyellow;
+  border: 1px solid lightpink;
+  margin: 10px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.Replay {
+  position: absolute;
+  border: 1px solid darkcyan;
+  overflow: hidden;
+  left: 20px;
+}
