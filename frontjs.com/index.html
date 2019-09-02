@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        (function (w) {
+            w.frontjsConfig = {
+                token: "6ab454c912dbdcb624e211378287c880",
+                behaviour: 9,
+                optimisedForSPA: true,
+                useHistory: true
+            };
+            w.frontjsTmpData = {
+                r: [],
+                e: [],
+                l: []
+            };
+            w.frontjsTmpCollector = function (ev) {
+                (ev.message ? window.frontjsTmpData.e : window.frontjsTmpData.r).push([new Date().getTime(),
+                    ev])
+            };
+            w.FrontJS = {
+                addEventListener: function (t, f) {
+                    w.frontjsTmpData.l.push([t, f]);
+                    return f;
+                },
+                removeEventListener: function (t, f) {
+                    for (var i = 0; i < w.frontjsTmpData.l.length; i++) {
+                        t === w.frontjsTmpData.l[i][0] && f === w.frontjsTmpData.l[i][1] && w.frontjsTmpData
+                            .l.splice(i, 1);
+                    }
+                    return f;
+                }
+            };
+            w.document.addEventListener("error", w.frontjsTmpCollector, true);
+            w.addEventListener("error", w.frontjsTmpCollector, true);
+            w.addEventListener("load", function () {
+                var n = w.document.createElement("script");
+                n.src = "https://static.frontjs.com/dist/current/tracker.min.js";
+                w.document.body.appendChild(n);
+            }, true);
+        })(window);
+    </script>
+</head>
+<body>
+    
+
+
+    测试  frontjs.com
+
+        <h1>这是一个测试监控的页面</h1>
+        <img src="sd.jpg" alt="">
+
+
+        <script>
+            setTimeout(function () {
+                console.log("object");
+                // console.log(object111);
+                Getjson()
+            }, 2000)
+
+
+            function Getjson() {
+                $.ajax({
+                    type: "POST",
+                    url: "some.php",
+                    data: "name=John&location=Boston",
+                    success: function (msg) {
+                        console.log("Data Saved: " + msg);
+                    }
+                })
+            }
+        </script>
+
+ <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../example/lib/zepto.min.js"></script>
+    <script src='s.js'></script>
+</body>
+</html>
