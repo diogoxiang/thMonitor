@@ -50,24 +50,34 @@ console.log(_0x3a2d);
 
 console.log(_0x3a2d("0x1c"));
 
-console.log("0x1c")
+console.log("0x1c");
+console.log(_0x3a2d("0x19"));
 
 
 
-function run(e){
+// function run(e){
 
-    return e.call(this,"diogoxiang"), 0
+//     return e.call(this,"diogoxiang"), 0
 
-}
-
-
+// }
 
 
-function add(c){
-    console.log(c);
+
+
+// function add(c){
+//     console.log(c);
     
+// }
+
+
+// var e = run(add)
+// console.log(e);
+
+
+function multicast(){
+    let v ="string"
+
+    return console.warn(v),0;
 }
 
-
-var e = run(add)
-console.log(e);
+console.log(multicast());

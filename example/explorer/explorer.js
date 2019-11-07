@@ -4,7 +4,7 @@ class explorer {
             jsError: true,
             resourceError: true,
             ajaxError: true,
-            consoleError: false, // console.error默认不处理
+            consoleError: false, // console.error 默认不处理
             scriptError: false, // 跨域js错误，默认不处理，因为没有任何信息
             vue: true,
             autoReport: true,
@@ -113,7 +113,7 @@ class explorer {
                 if (!isElementTarget) return; // js error不再处理
 
                 let url = target.src || target.href;
-                debugger;
+         
                 config.sendError({
                     title: target.nodeName,
                     msg: url,

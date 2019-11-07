@@ -184,6 +184,7 @@ window.FrontJS = function (window, doc, t) {
             console.warn(["Error(frontjs):", progt[e], "(CODE" + e + ")", "See https://www.frontjs.com/doc/view/errcode/#" + encodeURIComponent(url)].join(" "));
         }
     };
+
     if (window.FrontJS) {
         return fetch(4001), window.FrontJS;
     }
@@ -231,6 +232,7 @@ window.FrontJS = function (window, doc, t) {
         }
         return 0;
     };
+
     var assert = {
         KVArrayCopy: function (options) {
             var processedOptions = {};
@@ -486,6 +488,7 @@ window.FrontJS = function (window, doc, t) {
             };
         }
     };
+
     var options = function (item) {
         var node = {};
         /** @type {boolean} */
@@ -504,6 +507,8 @@ window.FrontJS = function (window, doc, t) {
         }
         return f(item.exclude) ? (url = f(item.exclude), fetch(1004, url), a = a & false) : (node.exclude = assert.uriArrayCopy(item.exclude), node.exclude.push(o), node.exclude.push(n)), resolve(item.userData) ? (url = resolve(item.userData), fetch(1005, url), a = a & false) : node.userData = assert.KVArrayCopy(item.userData), !!a && node;
     }(t);
+
+
     if (!options) {
         return fetch(4E3), false;
     }
@@ -635,6 +640,7 @@ window.FrontJS = function (window, doc, t) {
             add();
         }, timeout);
     }();
+
     window.addEventListener("beforeunload", function (canCreateDiscussions) {
         if (window.performance && window.performance.timing && options.behaviour & HTML_ESCAPE) {
             var options = {};
@@ -674,6 +680,7 @@ window.FrontJS = function (window, doc, t) {
             callback(str, parser2);
         }
     }, true);
+    
     window.addEventListener("load", function (canCreateDiscussions) {
         if (window.performance && window.performance.timing && options.behaviour & HTML_ESCAPE) {
             var data = {};
@@ -709,9 +716,11 @@ window.FrontJS = function (window, doc, t) {
             callback(str, res);
         }
     }, true);
+
     window.addEventListener("error", fn, true);
     doc.addEventListener("error", main, true);
     doc.addEventListener("load", main, true);
+    
     var opts = function (data) {
         /**
          * @param {!Object} err
@@ -748,6 +757,8 @@ window.FrontJS = function (window, doc, t) {
             }
         };
     }(options);
+
+
     return {
         C: {
             SCRIPT: HTML_SKIP_HTML,
